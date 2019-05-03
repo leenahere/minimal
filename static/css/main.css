@@ -17,6 +17,14 @@ main {
     max-width: 750px;
 }
 
+.content {
+  font-size: calc(112.5% + 0.15vw);
+  text-align: left;
+}
+
+img + em {
+  font-size: 70%;
+}
 /*footer*/
 
 .copyright {
@@ -36,8 +44,8 @@ main {
 
 .intro > h2 {
     color: #757575;
-    font-size: 2vmin;
-    line-height: 25px;
+    font-size: 2.5vmin;
+    line-height: 1.5;
 }
 
 .intro > .profile {
@@ -123,4 +131,8 @@ img {
 
 .item h4 a:link, a:visited, a:hover {
   text-decoration: none;
+}
+
+h4 {
+  font-size: 1.5em;
 }
