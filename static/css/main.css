@@ -11,6 +11,10 @@ body {
 }
 
 main {
+  margin: auto;
+}
+
+.text {
     margin: auto;
     padding: 25px;
     flex: 1 0 auto;
@@ -100,6 +104,8 @@ a, a:hover, a:visited, a:active, a:link, a:focus {
     border-width: 0.15px;
     color: #3a3a3a;
     background-color: white;
+    white-space: nowrap;
+    line-height: 200%;
     /* float: right;
     margin-left: 5px; */
 }
@@ -135,4 +141,84 @@ img {
 
 h4 {
   font-size: 1.5em;
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media (min-width: 30em) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 60em) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  // sets up hover state
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+  padding-bottom: 1em;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+article {
+  padding: 20px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#card-title {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+#card-subtitle {
+  flex: 1;
+  line-height: 1.4;
+}
+
+#card-tags {
+  margin: 2em 0 0 0;
+}
+
+.thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#page-title {
+  text-transform: uppercase;
+  margin: 1em 0 1em 0;
 }

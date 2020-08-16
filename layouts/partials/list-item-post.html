@@ -13,8 +13,6 @@
     {{ end }}
     {{ with .Params.link }} {{ $.Scratch.Set "link" . }} {{ end }}
 
-    {{ with .Params.image }} {{ $.Scratch.Set "image" . }} {{ end }}
-
     {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "subtitle" }}
     {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
 
@@ -23,7 +21,5 @@
     {{ range .Params.tags }}
     <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}"><kbd class="item-tag">{{ . }}</kbd></a>
     {{ end }}
-    <br>
-    <img src="{{ $.Scratch.Get "image" }}" style="max-height: 250px; max-width: 450px; margin-top: 5px;">
 
 </div>

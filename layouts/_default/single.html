@@ -1,8 +1,8 @@
 {{ partial "header" . }}
 
-<main>
+<div class="text">
 
-    {{ partial "list-item" . }}
+    {{ partial "list-item-post" . }}
 
     <br> <div class="content">{{ .Content }}</div>
 
@@ -25,6 +25,6 @@
 
     {{ end }}
 
-</main>
+</div>
 
 {{ partial "footer.html" . }}

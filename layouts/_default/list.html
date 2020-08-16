@@ -2,9 +2,17 @@
 
 <main>
 
-    <h2>{{ .Title }}</h2>
+    <h2 id="page-title">{{ .Title }}</h2>
 
-    {{ range (.Paginator 15).Pages }} {{ partial "list-item" . }} {{ end }}
+    <div class="band">
+      {{ if eq .Section "blog" }}
+        {{ range (.Paginator 20).Pages }} {{ partial "card-blog" . }} {{ end }}
+      {{ else if eq .Section "projects"}}
+        {{ range (.Paginator 20).Pages }} {{ partial "card-project" . }} {{ end }}
+      {{ else }}
+        {{ range (.Paginator 20).Pages }} {{ partial "card-project" . }} {{ end }}
+      {{ end }}
+    </div>
 
 </main>
 
